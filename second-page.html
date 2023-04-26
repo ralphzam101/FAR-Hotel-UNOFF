@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAR Hotel - Rooms</title>
+    <link rel="icon" href="assets/images/far1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/second-page.css">
+    <script src="https://kit.fontawesome.com/d52215e960.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+    <script src="assets/script/second-page.js" defer></script>
+    <nav class="navbar navbar-expand-lg bg-navbar">
+        <div class="container div-navbar">
+            <a class="navbar-brand" href="index.html"><img src="assets/css/images/logos/Logo-2.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#promoLink">Promos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="top-image">
+    </div>
+
+    <!-- Check-in/Check-out -->
+    <div class="book-div">
+        <form method="#" action="#">
+          <div class="book-input-div">
+            <div>
+              <label for="checkIn">Check-in: </label>
+              <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div>
+              <label for="checkOut">Check-out: </label>
+              <input type="date" id="checkout" name="checkout" required >
+            </div>
+    
+            <div class="margin-1">
+            <label for="rooms" class="label-rooms">Rooms:</label>
+            <div class="div-rooms">
+              <input type="button" class="minus-btn" value="-" onclick="decrementRoom()">
+              <input type="text" id="rooms" name="rooms" value="1" min="1" max="10" readonly>
+              <input type="button" class="plus-btn" value="+" onclick="incrementRoom()">
+              </div>
+            </div>
+    
+            <div class="margin-1">
+            <div class="div-adults">
+              <label for="adults" class="label-adults">Adults:</label>
+              <input type="button" button class="minus-btn" value="-" onclick="decrementAdult()">
+              <input type="number" id="adults" name="adults" value="2" min="2" max="10" readonly>
+              <input type="button" class="plus-btn" value="+"  onclick="incrementAdult()">
+            </div>
+            </div>
+            <div>
+              <label></label><br>
+              <!-- REMOVE CHECK AVAILABILITY BUTTON -->
+            <!-- <input type="submit" value="Check Availability" id="checkBtn"> -->
+            </div>
+          </div>
+        </form>
+      </div>
+      
+
+
+    <!-- Available Room Cards -->
+    <div class="cart-row">
+        <div class="cart-summary">
+            <div class="div-summary">
+                <span class="selection-summary">Selection Summary</span>
+                <ul class="cart-list">
+                    
+                    <div id="summaryBill" class="summaryBill">
+                    </div>
+                    <li class="li-last">
+                        
+                        <div>
+                            <h5>Total</h5>
+                            <p>Includes Taxes & Surcharges</p>
+                        </div>
+                        <span class="price" id="total">Php 0,000</span>
+                    </li>
+                </ul>
+                <div class="check-out">
+                    <button class="bookBtn" id="bookNow">CHECK OUT</button>
+                </div>
+            </diV>
+            
+        </div>
+
+        <!-- Rooms -->
+        <div class="available-rooms">
+
+            <!-- Presidential Suite | mySlides | 0 | Php 25,500.00 -->
+            <div class="card">
+                <div class="row card-row">
+                    <div class="col">
+                        <div class="d-flex flex-row">
+                            <!-- Room Modal -->
+                            <div class="d-flex ">
+                                <!-- Button trigger modal -->
+                                <div class="card-icon btn p-0" data-bs-toggle="modal" data-bs-target="#presidentialRoom">
+                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite1.jpg">
+                                </div>
+      
+                                <!-- Modal -->
+                                <div class="modal fade" id="presidentialRoom" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="presidentialRoomLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down modal-fullscreen-lg-down modal-fullscreen-md-down">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="presidentialRoomLabel">
+                                                    Presidential Suite
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+
+                                                    <!-- Full Images -->
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">1 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite1.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">2 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite2.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">3 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite3.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">4 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite4.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">5 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite5.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides">
+                                                                <div class="numbertext">6 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite6.jpg" style="width:100%">
+                                                            </div>
+                                                    
+                                                            <!-- Next and previous buttons -->
+                                                            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                                                            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+                                                            <!-- Thumbnail images -->
+                                                            <div class="row thumbnail-images">
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite1.jpg" style="width:100%" onclick="currentSlide(1, 0)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite2.jpg" style="width:100%" onclick="currentSlide(2, 0)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite3.jpg" style="width:100%" onclick="currentSlide(3, 0)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite4.jpg" style="width:100%" onclick="currentSlide(4, 0)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite5.jpg" style="width:100%" onclick="currentSlide(5, 0)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/PresidentialSuite6.jpg" style="width:100%" onclick="currentSlide(6, 0)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="room-card">
+                                                                <div class="room-body">
+                                                                    <p class="room-text">
+                                                                        Lavishly decorated with state-of-the-art amenities, The Presidential Suite offers a luxurious and exclusive accommodation. Spanning 368 square-meter, experience luxury with highest levels of elegance, sophistication, and comfort from Solaire's brand of excellent service and Filipino hospitality.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col modal-hotel-div">
+                                                                    <span class="room-title">Room Features</span>
+                                                                    <ul>
+                                                                        <li>The Presidential Suites, 368m², are designed with luxury artistic sense.</li>
+                                                                        <li>They include two bedrooms, a living room, an office, a dining room and a sitting room to accommodate VIP guests.</li>
+                                                                        <li>Room service is available 24-hours a day.</li>
+                                                                        <li>BVarious amenities including in-room capsule coffee machine and Wi-Fi service is provided free of charge.</li>
+                                                                        <li>Spacious walk-in closet</li>
+                                                                    </ul>
+                                                                    <span class="room-title">Hotel Inclusions</span>
+                                                                        <p><img src="assets/css/images/amenities/aircon.png"> 24/7 Aircon</p>
+                                                                        <p><img src="assets/css/images/amenities/wifi.png"> 5G Wifi Connectivity</p>
+                                                                        <p><img src="assets/css/images/amenities/shower.png"> Hot and Cold Shower</p>
+                                                                        <p><img src="assets/css/images/amenities/bathtub.png"> Bath Tub and Jaccusi</p>
+                                                                        <p><img src="assets/css/images/amenities/bfast.png"> Breakfast Included</p>
+                                                                        <p><img src="assets/css/images/amenities/pool.png"> Pool Access</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="modal-hotel-div">
+                                                                        <span class="room-title">Additional Inclusions</span>
+                                                                        <ul>
+                                                                            <li>Stand-Up Audio</li>
+                                                                            <li>Nespresso Coffee Machine</li>
+                                                                            <li>Green /Black Tea (Tea Bags)</li>
+                                                                            <li>Coffee Pot</li>
+                                                                            <li>Grand Piano</li>
+                                                                            <li>Nespresso Coffee Machine</li>
+                                                                            <li>One complimentary minibar per night</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Amenities</span>
+                                                                        <ul>
+                                                                            <li>5 Bath Amenities</li>
+                                                                            <li>Bath Towels</li>
+                                                                            <li>Bath Robes</li>
+                                                                            <li>Shower Caps</li>
+                                                                            <li>Hair Combs</li>
+                                                                            <li>Cotton Swabs</li>
+                                                                            <li>Emery Boards</li>
+                                                                            <li>Hair Dryer</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Check-in/Check-out</span>
+                                                                        <ul>
+                                                                            <li>Check in 03:00 PM</li>
+                                                                            <li>Check out 11:00 AM</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="d-flex modal-buttons justify-content-between align-items-center p-0" style="background-color: none;">
+                                                    
+                                                    <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Room Info -->
+                            <div class="card-text">
+                                <span class="card-title">PRESIDENTIAL SUITE</span>
+                                <h6>Up to 6 Guests | King Size Bed</h6>
+                                <div class="room-icons">
+                                    <span class="material-symbols-outlined" title="WIFI & Ethernet Port">wifi</span>
+                                    <span class="material-symbols-outlined" title="Safe">lock</span>
+                                    <span class="material-symbols-outlined" title="Office Space">table_restaurant</span>
+                                    <span class="material-symbols-outlined" title="Kitchen Set">cooking</span>
+                                    <span class="material-symbols-outlined" title="Refrigerator">kitchen</span>
+                                    <span class="material-symbols-outlined" title="55'' Smart TV">TV</span>
+                                    <span class="material-symbols-outlined" Title="Jaccuzi">hot_tub</span>
+                                </div>
+                                <p>
+                                    Live the lavish lifestyle of royalty as you dwell in our Presidential Suite.
+                                    <span id="dots">...</span>
+                                    <span class="more-text" id="more">The toilet comes with a rain shower and a built-in bathtub. Stay connected 24/7 with complimentary high speed wifi and a smart HD television with access to international channels. Whether you are staying for a day or a month, we will ensure that you are well taken care of.</span>
+                                    <a href="#" onclick="readMore()" class="read-more" id="readMore">More Information</a>
+                                </p>
+                            </div>
+                            <div class="card-row">
+                                <div class="room-price">
+                                    <span id="roomPrice">Php 25,500.00</span>
+                                    <button class="select-button" id="presidentialBtn">SELECT</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Two Bedroom Grand Deluxe Suite | mySlides3 | 2 | Php 10,500.00 -->
+            <div class="card">
+                <div class="row card-row">
+                    <div class="col">
+                        <div class="d-flex flex-row">
+                            <!-- Room Modal -->
+                            <div class="d-flex ">
+                                <!-- Button trigger modal -->
+                                <div class="card-icon btn p-0" data-bs-toggle="modal" data-bs-target="#twoBedroomSuite">
+                                    <img src="assets/css/images/rooms/Suite/PresidentialSuite1.jpg">
+                                </div>
+      
+                                <!-- Modal -->
+                                <div class="modal fade" id="twoBedroomSuite" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="twoBedroomSuiteLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down modal-fullscreen-lg-down modal-fullscreen-md-down">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="twoBedroomSuiteLabel">
+                                                    Two Bedroom Grand Deluxe Suite
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+
+                                                    <!-- Full Images -->
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">1 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite1.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">2 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite2.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">3 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite3.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">4 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite4.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">5 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite5.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides2">
+                                                                <div class="numbertext">6 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite3.jpg" style="width:100%">
+                                                            </div>
+                                                    
+                                                            <!-- Next and previous buttons -->
+                                                            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                                                            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+                                                            <!-- Thumbnail images -->
+                                                            <div class="row thumbnail-images">
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite1.jpg" style="width:100%" onclick="currentSlide(1, 1)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite2.jpg" style="width:100%" onclick="currentSlide(2, 1)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite3.jpg" style="width:100%" onclick="currentSlide(3, 1)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite4.jpg" style="width:100%" onclick="currentSlide(4, 1)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite5.jpg" style="width:100%" onclick="currentSlide(5, 1)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Suite/TwoBedroomGrandDeluxeSuite3.jpg" style="width:100%" onclick="currentSlide(6, 1)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="room-card">
+                                                                <div class="room-body">
+                                                                    <p class="room-text">
+                                                                        Two-Bedroom Grand Deluxe Suite, Two Relaxing Bedrooms and Spaciously Decorated Living Room
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col modal-hotel-div">
+                                                                    <span class="room-title">Room Features</span>
+                                                                    <ul>
+                                                                        <li>The Two-Bed Room Grand Deluxe Suites, 135m², offer independent living space with two private bedrooms: a king and a twin.</li>
+                                                                        <li>The elegantly furnished spacious living room provides efficient space for guests.</li>
+                                                                        <li>Room service is available 24-hours a day.</li>
+                                                                        <li>Various amenities including in-room capsule coffee machine and Wi-Fi service is provided free of charge.</li>
+                                                                    </ul>
+                                                                    <span class="room-title">Hotel Inclusions</span>
+                                                                        <p><img src="assets/css/images/amenities/aircon.png"> 24/7 Aircon</p>
+                                                                        <p><img src="assets/css/images/amenities/wifi.png"> 5G Wifi Connectivity</p>
+                                                                        <p><img src="assets/css/images/amenities/shower.png"> Hot and Cold Shower</p>
+                                                                        <p><img src="assets/css/images/amenities/bfast.png"> Breakfast Included</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="modal-hotel-div">
+                                                                        <span class="room-title">Additional Inclusions</span>
+                                                                        <ul>
+                                                                            <li>55-inch FULL HD TV (bed room)</li>
+                                                                            <li>65-inch FULL HD TV (living room)</li>
+                                                                            <li>Sound Bar</li>
+                                                                            <li>Blu-ray Player</li>
+                                                                            <li>Nespresso Coffee Machine</li>
+                                                                            <li>Green /Black Tea (Tea Bags)</li>
+                                                                            <li>Coffee Pot</li>
+                                                                            <li>Nespresso Coffee Machine</li>
+                                                                            <li>One complimentary minibar per night</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Amenities</span>
+                                                                        <ul>
+                                                                            <li>5 Bath Amenities</li>
+                                                                            <li>Bath Towels</li>
+                                                                            <li>Bath Robes</li>
+                                                                            <li>Shower Caps</li>
+                                                                            <li>Hair Combs</li>
+                                                                            <li>Cotton Swabs</li>
+                                                                            <li>Emery Boards</li>
+                                                                            <li>Hair Dryer</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Check-in/Check-out</span>
+                                                                        <ul>
+                                                                            <li>Check in 03:00 PM</li>
+                                                                            <li>Check out 11:00 AM</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="d-flex modal-buttons justify-content-between align-items-center p-0" style="background-color: none;">
+                                                    <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Room Info -->
+                            <div class="card-text">
+                                <span class="card-title">EXECUTIVE SUITE</span>
+                                <h6> 6 Guests | 1 King Size Bed | Twin Bed </h6>
+                                <div class="room-icons">
+                                    <span class="material-symbols-outlined" title="WIFI & Ethernet Port">wifi</span>
+                                    <span class="material-symbols-outlined" title="Safe">lock</span>
+                                    <span class="material-symbols-outlined" title="Office Space">table_restaurant</span>
+                                    <span class="material-symbols-outlined" title="Kitchen Set">cooking</span>
+                                    <span class="material-symbols-outlined" title="Refrigerator">kitchen</span>
+                                    <span class="material-symbols-outlined" title="55'' Smart TV">TV</span>
+                                    <span class="material-symbols-outlined" Title="Jaccuzi">hot_tub</span>
+                                </div>
+                                <p>
+                                    Two Relaxing Bedrooms and Spaciously Decorated Living Room.
+                                </p>
+                            </div>
+                            <div class="card-row">
+                                <div class="room-price">
+                                    <span id="roomPrice">Php 10,500.00</span>
+                                    <button class="select-button" id="executiveBtn">SELECT</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            
+
+            <!-- Grand Deluxe Pool Villa | mySlides3 | 2 | Php 18,000.00 -->
+            <div class="card">
+                <div class="row card-row">
+                    <div class="col">
+                        <div class="d-flex flex-row">
+                            <!-- Room Modal -->
+                            <div class="d-flex ">
+                                <!-- Button trigger modal -->
+                                <div class="card-icon btn p-0" data-bs-toggle="modal" data-bs-target="#grandDeluxePoolVilla">
+                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla.jpg">
+                                </div>
+      
+                                <!-- Modal -->
+                                <div class="modal fade" id="grandDeluxePoolVilla" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="grandDeluxePoolVillaLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down modal-fullscreen-lg-down modal-fullscreen-md-down">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="grandDeluxePoolVillaLabel">
+                                                    Grand Deluxe Pool Villa
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+
+                                                    <!-- Full Images -->
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">1 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">2 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla2.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">3 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla3.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">4 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla4.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">5 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla5.jpg" style="width:100%">
+                                                            </div>
+                                                            <div class="mySlides3">
+                                                                <div class="numbertext">6 / 6</div>
+                                                                    <img src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla6.jpg" style="width:100%">
+                                                            </div>
+                                                    
+                                                            <!-- Next and previous buttons -->
+                                                            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                                                            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+
+                                                            <!-- Thumbnail images -->
+                                                            <div class="row thumbnail-images">
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla.jpg" style="width:100%" onclick="currentSlide(1, 2)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla2.jpg" style="width:100%" onclick="currentSlide(2, 2)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla3.jpg" style="width:100%" onclick="currentSlide(3, 2)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla4.jpg" style="width:100%" onclick="currentSlide(4, 2)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla5.jpg" style="width:100%" onclick="currentSlide(5, 2)">
+                                                                </div>
+                                                                <div class="column">
+                                                                    <img class="demo cursor" src="assets/css/images/rooms/Pool Villa/GrandDeluxePoolVilla6.jpg" style="width:100%" onclick="currentSlide(6, 2)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="room-card">
+                                                                <div class="room-body">
+                                                                    <p class="room-text">
+                                                                        Grand Deluxe Pool Villa, a Luxurious Space with the Unique Artistic Sensibility of Hotel Paradise
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col modal-hotel-div">
+                                                                    <span class="room-title">Room Features</span>
+                                                                    <ul>
+                                                                        <li>The Grand Deluxe Pool Villa is the finest room at Hotel Paradise, a signature space that expresses the hotel's artistic sensibility.</li>
+                                                                        <li>It features luxurious facilities, including an exclusive pool, steam sauna facilities, an exercise room, a dining room and more.</li>
+                                                                        <li>Pool villa customer service is provided only for Pool Villa guests at Hotel Paradise.</li>
+                                                                        <li>Come and experience the unprecedented level of service.</li>
+                                                                    </ul>
+                                                                    <span class="room-title">Hotel Inclusions</span>
+                                                                        <p><img src="assets/css/images/amenities/aircon.png"> 24/7 Aircon</p>
+                                                                        <p><img src="assets/css/images/amenities/wifi.png"> 5G Wifi Connectivity</p>
+                                                                        <p><img src="assets/css/images/amenities/shower.png"> Hot and Cold Shower</p>
+                                                                        <p><img src="assets/css/images/amenities/bathtub.png"> Bath Tub</p>
+                                                                        <p><img src="assets/css/images/amenities/bfast.png"> Breakfast Included</p>
+                                                                        <p><img src="assets/css/images/amenities/bfast.png"> Private Pool</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="modal-hotel-div">
+                                                                        <span class="room-title">Additional Inclusions</span>
+                                                                        <ul>
+                                                                            <li>86-inch FULL HD TV (living room)</li>
+                                                                            <li>43-inch FULL HD TV (bed room)</li>
+                                                                            <li>58-channel Satellite TV</li>
+                                                                            <li>Top-quality stereo system</li>
+                                                                            <li>Wine Cellar</li>
+                                                                            <li>Coffee 6 Capsules</li>
+                                                                            <li>Nespresso Coffee Machine</li>
+                                                                            <li>One complimentary minibar per night</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Amenities</span>
+                                                                        <ul>
+                                                                            <li>5 Bath Amenities</li>
+                                                                            <li>Bath Towels</li>
+                                                                            <li>Bath Robes</li>
+                                                                            <li>Shower Caps</li>
+                                                                            <li>Hair Combs</li>
+                                                                            <li>Cotton Swabs</li>
+                                                                            <li>Emery Boards</li>
+                                                                            <li>Hair Dryer</li>
+                                                                        </ul>
+                                                                        <span class="room-title">Check-in/Check-out</span>
+                                                                        <ul>
+                                                                            <li>Check in 03:00 PM</li>
+                                                                            <li>Check out 11:00 AM</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="d-flex modal-buttons justify-content-between align-items-center p-0" style="background-color: none;">
+                                                    <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Room Info -->
+                            <div class="card-text">
+                                <span class="card-title">DELUXE SUITE</span>
+                                <h6> 30 Guests | 6 Rooms</h6>
+                                <div class="room-icons">
+                                    <span class="material-symbols-outlined" title="WIFI & Ethernet Port">wifi</span>
+                                    <span class="material-symbols-outlined" title="Safe">lock</span>
+                                    <span class="material-symbols-outlined" title="Office Space">table_restaurant</span>
+                                    <span class="material-symbols-outlined" title="Kitchen Set">cooking</span>
+                                    <span class="material-symbols-outlined" title="Refrigerator">kitchen</span>
+                                    <span class="material-symbols-outlined" title="55'' Smart TV">TV</span>
+                                    <span class="material-symbols-outlined" Title="Jaccuzi">hot_tub</span>
+                                </div>
+                                <p>
+                                    A Luxurious Space with the Unique Artistic Sensibility of Hotel Paradise.
+                                </p>
+                            </div>
+                            <div class="card-row">
+                                <div class="room-price">
+                                    <span id="roomPrice">Php 7,500.00</span>
+                                    <button class="select-button" id="deluxeBtn">SELECT</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION-->
+    <div class="container-fluid footer-container pt-5 pb-1">
+        <div class="row footer-row">
+        <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
+            <div class="footer-title">
+            <h4>Company</h4>
+            </div>
+            <div class="footer-text">
+            <h5>FAR Hotel</h5>
+            
+            <a class="link">
+                <h5>Address: 528 Epifanio de los Santos Ave, Cubao, Quezon City, 1109 Metro Manila</h5>
+            </a>
+            
+            <h5><img src="assets/css/images/logos/Logo-2.png" alt=""></h5>
+            </div> 
+        </div>
+
+        <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
+            <div class="footer-title">
+            <h4>Quick Links</h4>
+            </div>
+            <div class="footer-text">
+            <a href="index.html"><h5>Home</h5></a>
+            <a href="index.html#roomLink"><h5>Rooms</h5></a>
+            <a href="index.html#promoLink"><h5>Promos</h5></a>
+            <a href="index.html#aaLink"><h5>Amenities</h5></a>
+            <a href="index.html#aaLink"><h5>Activities</h5></a>
+            <a href="second-page.html"><h5>Book Now</h5></a>
+            </div> 
+        </div>
+
+        <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
+            <div class="footer-title">
+            <h4>Rooms</h4>
+            </div>
+            <div class="footer-text">
+            <a href="index.html#roomLink"><h5>Presidential Suite</h5></a>
+            <a href="index.html#roomLink"><h5>Executive Suite</h5></a>
+            <a href="index.html#roomLink"><h5>Deluxe Suite</h5></a>
+            </div> 
+            <br>
+            <div class="footer-title">
+            <h4>Offers</h4>
+            </div>
+            <div class="footer-text">
+            <a href="index.html#promoLink"><h5>3 Nights stay, free 1 Night</h5></a>
+            <a href="index.html#promoLink"><h5>Book Online For Less 10%</h5></a>
+            <a href="index.html#promoLink"><h5>Free Buffet on Your Birthday</h5></a>
+            </div>
+        </div>
+
+        <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
+            <div class="footer-title">
+            <h4>Contact us</h4>
+            </div>
+            <div class="footer-text">
+            <h5>Cellphone: (+63) 912-3456-7890</h5>
+            <h5>Telephone: (02) 123-4567</h5>
+            <h5>Email: farhotelgroups@gmail.com</h5>   
+            </div> 
+            <br>
+            <div class="footer-title">
+            <h4>Follow Us</h4>
+            </div>
+            <div class="footer-text">
+            <h4>
+                <a class="link">
+                <span><i class="fa-brands fa-square-facebook"></i></span>
+                </a>
+                <a class="link">
+                <span><i class="fa-brands fa-square-instagram"></i></span>
+                </a>
+                <a class="link">
+                <span><i class="fa-brands fa-square-twitter"></i></span>
+                </a>
+            </h4>
+            </div> 
+        </div>
+
+        </div>
+        <hr>
+
+        <div class="footer-text2 text-center">
+        <h5>Copyright © 2023 All rights reserved | This website is made by <a href="">FAR Group</a></h5>
+        </div>
+
+    </div> 
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
